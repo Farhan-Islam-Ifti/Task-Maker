@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Maker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container task_list_empty">
+        <header>
+            <div class="theme_toggle">
+                <button class="theme_toggle_btn"></button>
+            </div>
+            <span class="heading">My Day</span>
+        </header>
+        <section class="tasks">
+            <ul id="tasksList"></ul>
+        </section>
+        <footer>
+            <form id="new_task_form">
+                <input type="text" name="new_task_input" id="new_task_input" placeholder="Create New Task" value="" />
+                <button id="new_task_input_btn" type="submit"></button>
+            </form>
+            <button id="clear_all_tasks_btn">Clear All Tasks</button>
+        </footer>
+    </div>
+
+    
+    <div id="editTaskModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form id="edit_task_form">
+                <label for="edit_task_input">Task:</label>
+                <input type="text" id="edit_task_input" name="edit_task_input" required />
+                <label for="edit_task_description">Description:</label>
+                <input type="text" id="edit_task_description" name="edit_task_description" />
+                <button type="submit" id="edit_task_submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
